@@ -28,10 +28,10 @@ export class Hashing {
 
     public static readonly base58 = {
         decode: function (encodedString: string): Uint8Array {
-            return bs58.decode(encodedString)
+            return bs58.decode(encodedString);
         },
         encode: function (decodedBytes: Uint8Array): string {
-            return bs58.encode(decodedBytes)
+            return bs58.encode(decodedBytes);
         },
     };
 

@@ -1,6 +1,7 @@
 // @ts-check
 
 import { BlockCodec, ByteView } from "multiformats/codecs/interface";
+
 import varint from "varint";
 
 /**

@@ -6,9 +6,13 @@ async function main() {
     /**
      * Client setup
      */
+
     const privateKey = PrivateKey.fromString(OPERATOR_KEY);
     const client = Client.forTestnet({ scheduleNetworkUpdate: false });
     client.setOperator(OPERATOR_ID, privateKey);
+    // Not sure why the above was undertaken instead of the normal initialization
+    // const client = Client.forTestnet({ scheduleNetworkUpdate: false });
+    // client.setOperator(OPERATOR_ID, OPERATOR_KEY);
 
     const didPrivateKey = PrivateKey.fromString(DID_PRIVATE_KEY);
 
@@ -20,7 +24,7 @@ async function main() {
     /**
      * Delete DID
      */
-    did.delete();
+    await did.delete();
 }
 
 main();
